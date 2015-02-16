@@ -1,0 +1,10 @@
+
+		<% @products.each do |product| %>
+	  <h5><%= product.title %></h5>
+	  <h5><%= product.price %></h5>
+	  <h5><%= product.description %></h5>
+		<img src="<%= product.image %>" width="200">
+		<h5><%= product.category %></h5>
+		<h5><%= product.brand %></h5>
+		<% end %>
+	
