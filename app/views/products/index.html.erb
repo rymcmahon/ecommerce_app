@@ -4,16 +4,13 @@
 <a href="/products?sort=high-to-low">Sort Most Expensive to Cheapest</a>
 <div class="row">
 <% @products.each do |product| %>
-<div class="col-md-4 col-sm-6">
-<a href="/products/ <%= product.id %>"><h3><%= product.title %></h3></a>
-
-<h4><%= number_to_currency(product.price) %></h4>
-
-<img src="<%= product.image %>" width="200">
-
-<h5><%= product.description %></h5>
-<h5><%= product.category %></h5>
-<h5><%= product.brand %></h5>
-</div><!-- end columns -->
+	<div class="col-md-4 col-sm-6">
+		<img src="<%= product.image %>" width="200">
+		<a href="/products/ <%= product.id %>"><h3><%= product.title %></h3></a>
+		<h5><%= product.description %></h5>
+		<h4><%= number_to_currency(product.price) %></h4>
+		<h5><%= product.category %></h5>
+		<h5><%= product.brand %></h5>
+	</div><!-- end columns -->
 <% end %>
 </div><!-- end row -->
