@@ -36,10 +36,6 @@
               <li><a href="/products?category=pads">Pants</a></li>
               <li><a href="/products?category=shin-guards">Shin Guards</a></li>
               <li><a href="/products?category=skates">Skates</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
             </ul>
           </li>
           <li><a href="#">Apparel</a></li>
@@ -76,6 +72,12 @@
   </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
+<% flash.each do |name, message| %>
+  <div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <%= message %>
+  </div>
+  <% end %>
 <%= yield %>
 </div><!-- end main container -->
 </body>
