@@ -1,11 +1,26 @@
-body {
-	
-}
-
 .navbar, .navbar-default, .navbar-header, .navbar-brand {
 	min-height: 120px;
+	background-color: #efefef;
 }
 
 #nav-form-wrapper {
 	margin-top: 67px;
+}
+
+.carousel-caption {
+	top: 0;
+	bottom: auto;
+}
+
+.carousel-caption h3 {
+	color: #ffffff;
+}
+
+#sid-caption h3 {
+	margin-top: -10px;
+}
+
+#kids-caption h3 {
+	margin-top: -15px;
+	color: #000;
 }
