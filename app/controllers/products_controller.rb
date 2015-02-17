@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+	def home
+
+	end
+
 	def index
 		@title = params[:title]
 		@price = params[:price]
