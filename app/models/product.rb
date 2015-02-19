@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
-
+	belongs_to :vendor
+	has_many :product_options
 	def discounted_message
 		if price < 60 
 			return "Discounted Item"

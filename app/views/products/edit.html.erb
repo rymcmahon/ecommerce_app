@@ -23,8 +23,8 @@
 		<%= text_field_tag :category, @product.category %>
 </div>
 <div>
-	<%= label_tag :brand %>
-		<%= text_field_tag :brand, @product.brand %>
+	<%= label_tag :vendor %>
+		<%= text_field_tag :vendor, @product.vendor.name %>
 </div>
 <%= submit_tag "Update Product"%>
 </div><!-- end form wrap -->

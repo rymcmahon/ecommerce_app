@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
 		@description = params[:description]
 		@image = params[:image]
 		@category = params[:category]
-		@brand = params[:brand]
+		@vendor = params[:vendor]
 		@products = Product.all
 		if params[:price] == "sale"
 			@products = Product.where("price < ?", 60)
@@ -49,7 +49,7 @@ class ProductsController < ApplicationController
 		@description = params[:description]
 		@image = params[:image]
 		@category = params[:category]
-		@brand = params[:brand]
+		@vendor = params[:vendor]
 		@products = Product.all
 	end
 
@@ -57,7 +57,7 @@ class ProductsController < ApplicationController
 	end
 
 	def create 
-		Product.create({:title => params[:title], :price => params[:price], :description => params[:description], :image => params[:image], :category => params[:category], :brand => params[:brand]})
+		Product.create({:title => params[:title], :price => params[:price], :description => params[:description], :image => params[:image], :category => params[:category], :vendor => params[:vendor]})
 	end
 
 	def edit
@@ -67,7 +67,7 @@ class ProductsController < ApplicationController
 	def update
 		# x = product.find(); x.update
 		@product = Product.find(params[:id])
-		@product.update ({:title => params[:title], :price => params[:price], :description => params[:description], :image => params[:image], :category => params[:category], :brand => params[:brand]})
+		@product.update ({:title => params[:title], :price => params[:price], :description => params[:description], :image => params[:image], :category => params[:category], :vendor => params[:vendor]})
 	end
 
 	def destroy

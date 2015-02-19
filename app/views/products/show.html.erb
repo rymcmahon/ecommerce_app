@@ -6,7 +6,17 @@
 
 <h5><%= @product.description %></h5>
 <h5><%= @product.category %></h5>
-<h5><%= @product.brand %></h5>
+
+<% if @product.vendor %>
+	<h5><%= @product.vendor.name %></h5>
+<% end %>
+
+<ul>
+<% @product.product_options.each do |product_option|%>
+	<li><%= product_option.name %></li>
+<% end %>
+</ul>
+
 <a href="/products/<%= @product.id %>/edit">Edit</a>
 <a href="/products/<%= @product.id %>" data-method="delete" rel="nofollow" data-confirm="Are You Sure?">Delete</a>
 <table>
