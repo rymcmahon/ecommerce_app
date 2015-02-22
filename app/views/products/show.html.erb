@@ -33,3 +33,14 @@
 		<td><%= number_to_currency(@product.total) %></td>
 	</tr>
 </table>
+
+<h1>Make a Purchase</h1>
+
+<%= form_tag '/orders' do %>
+<div>
+	<%= label_tag :quantity %>
+		<%= text_field_tag :quantity %>
+		<%= hidden_field_tag :product_id, @product.id %>
+</div>
+<%= submit_tag "Buy Now"%>
+<% end %>

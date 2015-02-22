@@ -18,7 +18,7 @@
 
 #slide-one-caption {
 	right: -3%;
-	top: -20px;
+	top: -27px;
 	bottom: auto;
 }
 
@@ -53,10 +53,19 @@
 }
 
 #slide-three-caption h3 {
-	margin-top: 57px;
-	color: #000;
+	margin-top: 17px;
+	color: #fff;
 }
 
+#slide-three-caption a {
+	background-color: #eb1c36;
+	color: #000;
+	border: 1px solid #A01E2E;
+	border-radius: 8px;
+	padding: 8px 16px;
+	font-size: 24px;
+	margin-top: 15px;
+}
 /******* media queries ********/
 
 @media (max-width: 767px) {
