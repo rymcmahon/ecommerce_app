@@ -4,12 +4,11 @@ class ProductsController < ApplicationController
 	end
 
 	def index
-		@title = params[:title]
-		@price = params[:price]
-		@description = params[:description]
-		@image = params[:image]
-		@category = params[:category]
-		@vendor = params[:vendor]
+		# @title = params[:title]
+		# @price = params[:price]
+		# @description = params[:description]
+		# @image = params[:image]
+		# @category = params[:category]
 		@products = Product.all
 		if params[:price] == "sale"
 			@products = Product.where("price < ?", 60)
